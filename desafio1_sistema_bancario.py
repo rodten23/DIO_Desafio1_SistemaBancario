@@ -1,8 +1,13 @@
 menu = '''
-[d] Depositar
-[s] Sacar
-[e] Ver Extrato
-[x] Sair do Sistema
+=================================================================
+                     Que bom ter você aqui!                       
+  O Banco ROSAMM está sempre pronto a ajudar com usas finanças.
+=================================================================
+
+Por favor, digite a opção desejada:
+
+[d] Depositar   -   [e] Ver Extrato
+[s] Sacar       -   [x] Sair do Sistema\n
 '''
 
 saldo = 0
@@ -25,7 +30,7 @@ while True:
         print('Exibir Extrato')
 
     elif opcao == 'x':
-        print('Saindo do Sistema...')
+        print('\nSaindo do Sistema...\n')
         break
 
     else:
