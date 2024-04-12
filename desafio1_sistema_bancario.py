@@ -6,8 +6,9 @@ menu = '''
 
 Por favor, digite a opção desejada:
 
-[d] Depositar   -   [e] Ver Extrato
-[s] Sacar       -   [x] Sair do Sistema\n
+[D] Depositar   -   [E] Ver Extrato
+
+[S] Sacar       -   [X] Sair do Sistema\n
 '''
 
 saldo = 0
@@ -34,4 +35,4 @@ while True:
         break
 
     else:
-        print('Operação inválida! Por favor, selecione novamente a operação desejada.')
+        print('\nOperação inválida! Por favor, selecione novamente a operação desejada.\n')
