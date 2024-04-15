@@ -13,7 +13,7 @@ Por favor, digite a opção desejada:
 
 saldo = 0
 LIMITE_VALOR_SAQUE_DIARIO = 500
-extrato = ''
+extrato = 'R$ 0.00'
 saques_feitos = 0
 LIMITE_SAQUES = 3
 
@@ -29,6 +29,7 @@ while True:
                 valor_deposito = float(input('\nInfelizmente não aceitamos moedas.\nFavor, informe novamente valor a ser depositado => '))
             else:
                 saldo += valor_deposito
+                extrato += f'\nDepósito de R$ {valor_deposito:.2f}  (Saldo de R$ {saldo:.2f})'
                 break
 
     elif opcao == 's':
