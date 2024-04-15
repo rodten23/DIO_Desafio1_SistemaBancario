@@ -11,9 +11,10 @@ Por favor, digite a opção desejada:
 [S] Sacar       -   [X] Sair do Sistema\n
 '''
 
-saldo = 0
+saldo_inicial = 0
+saldo = saldo_inicial
 LIMITE_VALOR_SAQUE_DIARIO = 500
-extrato = 'R$ 0.00'
+extrato = ''
 saques_feitos = 0
 LIMITE_SAQUES = 3
 
@@ -37,7 +38,14 @@ while True:
 
     elif opcao == 'e':
         print('Exibir Extrato')
-
+        print(f'\nSaldo inicial => R$ {saldo_inicial:.2f}')
+        
+        if extrato == '':
+            print('\nAinda não foram feitos depósitos ou saques para esta conta.')
+        else:
+            print(extrato)
+        input('\nPressione qualquer tecla para voltar ao menu anterior: ')
+        
     elif opcao == 'x':
         print('\nSaindo do Sistema...\n')
         break
