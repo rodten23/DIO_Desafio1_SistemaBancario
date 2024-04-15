@@ -22,10 +22,14 @@ while True:
     opcao = input(menu)
 
     if opcao == 'd':
-        print('Fazer Depósito (aceitamos apenas notas):\n')
-        valor_deposito = input('Por favor, informe o valor que será depositado? => ')
-        if valor_deposito < 2:
-            print('Infelizmente não aceitamos moedas.\n Favor, informe novamente valor a ser depositado.\n')
+        print('Fazer Depósito (aceitamos apenas notas):')
+        valor_deposito = float(input('\nPor favor, qual valor que será depositado? => '))
+        while True:
+            if valor_deposito < 2:
+                valor_deposito = float(input('\nInfelizmente não aceitamos moedas.\nFavor, informe novamente valor a ser depositado => '))
+            else:
+                saldo += valor_deposito
+                break
 
     elif opcao == 's':
         print('Efetuar Saque')
