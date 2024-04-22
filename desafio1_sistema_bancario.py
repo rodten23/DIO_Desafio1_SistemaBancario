@@ -26,7 +26,7 @@ while True:
     opcao = input(menu)
 
     if opcao == 'd':
-        print('FAZER DEPÓSITO (aceitamos apenas notas):')
+        print('\nFAZER DEPÓSITO (aceitamos apenas notas):')
         valor_deposito = float(input('\nPor favor, qual valor será depositado? => '))
         while True:
             if valor_deposito < 2:
@@ -37,13 +37,13 @@ while True:
                 break
 
     elif opcao == 's':
-        print(f'EFETUAR SAQUE (disponibilizamos apenas notas)\nLimites: até {LIMITE_SAQUES} saques diários totalizando até R$ {LIMITE_VALOR_SAQUE:.2f} por saque.\n')
+        print(f'\nEFETUAR SAQUE (disponibilizamos apenas notas)\nLimites: até {LIMITE_SAQUES} saques diários totalizando até R$ {LIMITE_VALOR_SAQUE:.2f} por saque.')
         
         if saques_feitos_dia == LIMITE_SAQUES:
             print(f'Você atingiu o limite diário de {LIMITE_SAQUES} saques.\nNovos saques poderão ser feitos no próximo dia útil.\n')
         
         else:
-            valor_saque = float(input('\nPor favor, quanto você quer sacar? => '))
+            valor_saque = float(input('\nPor favor, quanto você quer sacar?\nOu digite 0 para voltar ao menu principal\n=> '))
             while True:
                 if valor_saque == 0:
                     break
@@ -60,7 +60,7 @@ while True:
                     break
 
     elif opcao == 'e':
-        print('EXIBIR EXTRATO')
+        print('\nEXIBIR EXTRATO')
         print(f'\nSaldo inicial => R$ {SALDO_INICIAL:.2f}')
         
         if extrato == '':
